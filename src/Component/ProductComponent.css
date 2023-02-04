@@ -1,0 +1,22 @@
+.btn-area{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+   
+}
+
+.product-data{
+    display: grid;
+    border: none;
+    grid-template-columns: repeat(3,1fr);
+    gap: 3rem;
+    padding: 10px;
+}
+.cart{
+    background-color: rgb(207, 240, 229);
+}
+.span{
+    background-color: rgb(195, 244, 195);
+    padding: 5px;
+    border-radius: 15px;
+}
