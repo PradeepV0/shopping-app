@@ -19,10 +19,10 @@ export function ProducComponent (){
         <CardDetails
         key={idx}
         idx = {idx}
-        prodImage = {product.productImg}
-        prodName = {product.productName}
-        prodPrice = {product.productPrice}
-        prodRating = {product.productRating}
+        Image = {product.productImg}
+        Name = {product.productName}
+        Price = {product.productPrice}
+        Rating = {product.productRating}
         cart = {cart}
         setCart = {setcart}
         item = {item}
@@ -44,7 +44,7 @@ export function ProducComponent (){
 }
 
 
-function CardDetails ({setCart, setItems, prodPrice, prodImage, prodName, prodRating, idx , item}) {
+function CardDetails ({setCart, setItems, prodPrice, Image, Name,Rating, idx , item}) {
   let count = 0
    const [showBtn, setShowBtn] = useState(true);
    const handleCartAdd = (idx, setItems, item) => {
@@ -60,11 +60,11 @@ function CardDetails ({setCart, setItems, prodPrice, prodImage, prodName, prodRa
 
    return(
    <Card className='cart' style={{ width: '18rem', padding: "10px"}}>
-   <Card.Img variant="top" src={prodImage} />
+   <Card.Img variant="top" src={Image} />
    <Card.Body>
-     <Card.Title>{prodName}</Card.Title>
-     <p className="price-cart">RS. {prodPrice}</p>
-     <p className="rating-data">{prodRating}</p>
+     <Card.Title>{Name}</Card.Title>
+     <p className="price-cart">RS. {Price}</p>
+     <p className="rating-data">{Rating}</p>
    </Card.Body>
    <div className="btn-area">
        {showBtn ? <Button onClick={()=>handleCartAdd(idx, setItems, item)} variant="primary">Add</Button>: 
